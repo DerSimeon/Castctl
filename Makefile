@@ -1,5 +1,5 @@
 # castctl build/install (macOS/Linux; use install.ps1 on Windows).
-VERSION ?= 0.1.0
+VERSION ?= 1.0.1
 LDFLAGS := -s -w -X main.version=$(VERSION)
 PREFIX  ?= $(HOME)/.local/bin
 

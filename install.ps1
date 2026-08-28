@@ -1,7 +1,7 @@
 # Builds castctl and installs it to a per-user dir on PATH (Windows).
 # Usage:  powershell -ExecutionPolicy Bypass -File install.ps1
 param(
-    [string]$Version = "0.1.0"
+    [string]$Version = "1.0.1"
 )
 
 $ErrorActionPreference = "Stop"
