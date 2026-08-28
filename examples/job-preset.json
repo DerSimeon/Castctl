@@ -1,0 +1,5 @@
+{
+  "inputUri": "gs://my-bucket/input/video.mp4",
+  "outputUri": "gs://my-bucket/output/",
+  "templateId": "preset/web-hd"
+}

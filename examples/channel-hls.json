@@ -1,0 +1,24 @@
+{
+  "inputAttachments": [
+    { "key": "my-input", "input": "PROJECTS/LOCATIONS/INPUTS/my-input" }
+  ],
+  "output": { "uri": "gs://my-bucket/live/my-channel" },
+  "elementaryStreams": [
+    {
+      "key": "es-video",
+      "videoStream": {
+        "h264": { "profile": "high", "widthPixels": 1280, "heightPixels": 720, "bitrateBps": 3000000, "frameRate": 30 }
+      }
+    },
+    {
+      "key": "es-audio",
+      "audioStream": { "codec": "aac", "channelCount": 2, "bitrateBps": 160000 }
+    }
+  ],
+  "muxStreams": [
+    { "key": "mux-720p", "container": "ts", "elementaryStreams": ["es-video", "es-audio"], "segmentSettings": { "segmentDuration": "6s" } }
+  ],
+  "manifests": [
+    { "fileName": "main.m3u8", "type": "HLS", "muxStreams": ["mux-720p"], "maxSegmentCount": 5 }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "outputUri": "gs://my-bucket/clips/my-clip",
+  "slices": [
+    {
+      "timeSlice": {
+        "markinTime": "2024-01-01T00:00:00Z",
+        "markoutTime": "2024-01-01T00:00:30Z"
+      }
+    }
+  ],
+  "clipManifests": [
+    { "manifestKey": "main.m3u8" }
+  ]
+}
